@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Image from '../../Common/Image'
 
 const Login = () => {
@@ -36,7 +37,7 @@ const Login = () => {
                 <div className='w-full text-center mt-2'>
                     <p className='text-xl font-semibold text-gray-500'>
                         Not a Member? &nbsp;
-                        <span className='text-indigo-600 hover:text-indigo-400 cursor-pointer'>SignUp</span>
+                        <Link to="/signup" className='text-indigo-600 hover:text-indigo-400 cursor-pointer'>SignUp</Link>
                     </p>
                 </div>
             </div>
