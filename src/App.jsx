@@ -1,10 +1,8 @@
-import React from 'react'
+import Signup from './pages/Auth/Signup'
 
 const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline text-red-700">
-      Hello world!
-    </h1>
+    <Signup />
   )
 }
 
