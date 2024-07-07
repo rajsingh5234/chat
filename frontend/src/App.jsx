@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import PageNotFound from "./pages/pageNotFound";
 import VerifyOtp from "./pages/VerifyOtp";
 import { Toaster } from 'react-hot-toast';
+import TestCredentials from "./pages/TestCredentials";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/verify-otp" element={<VerifyOtp />} />
+          <Route path="/test-credentials" element={<TestCredentials />} />
         </Route>
 
         <Route element={<PrivateRoute />}>

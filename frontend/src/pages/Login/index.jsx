@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
@@ -18,6 +18,9 @@ const LoginSchema = Yup.object().shape({
 });
 
 const Login = () => {
+
+   const location = useLocation();
+   const cred = location?.state;
 
    const initialValues = {
       email: '',
@@ -49,7 +52,7 @@ const Login = () => {
    return (
       <div className="transition-none w-screen h-screen p-4 flex justify-center items-center bg-dark-primary">
          <Formik
-            initialValues={initialValues}
+            initialValues={cred || initialValues}
             validationSchema={LoginSchema}
             onSubmit={onSubmitHandler}
          >
@@ -94,6 +97,10 @@ const Login = () => {
                         </Link>
                      </div>
                   </div>
+
+                  <Link to="/test-credentials" className="mt-4 inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 border-b border-blue-500 hover:border-blue-800">
+                     Test credentials
+                  </Link>
                </Form>
             )}
 

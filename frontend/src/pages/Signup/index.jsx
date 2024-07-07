@@ -118,6 +118,10 @@ const Signup = () => {
                         Already resgistered ?
                      </Link>
                   </div>
+
+                  <Link to="/test-credentials" className="mt-4 inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 border-b border-blue-500 hover:border-blue-800">
+                     Test credentials
+                  </Link>
                </Form>
             )}
 
