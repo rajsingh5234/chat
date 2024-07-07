@@ -6,7 +6,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node backend/src/app.js",
-    "dev": "nodemon backend/src/app.js"
+    "dev": "nodemon backend/src/app.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",

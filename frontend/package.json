@@ -14,6 +14,7 @@
     "@reduxjs/toolkit": "^2.2.1",
     "antd": "^5.14.2",
     "axios": "^1.6.7",
+    "chat": "file:..",
     "formik": "^2.4.5",
     "moment": "^2.30.1",
     "react": "^18.2.0",

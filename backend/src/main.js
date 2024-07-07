@@ -10,6 +10,9 @@ import { Server } from 'socket.io';
 import jwt from "jsonwebtoken";
 import { Unread } from "./modules/Unread/unread.model.js";
 import { User } from "./modules/User/user.model.js";
+import path from "path";
+
+const __dirname = path.resolve()
 
 const app = express();
 
@@ -115,6 +118,15 @@ app.use("/api/v1/requests", requestRouter);
 app.use("/api/v1/chats", chatRouter);
 app.use("/api/v1/messages", messageRouter);
 
+app.get("/api/v1/test", (req, res) => {
+   res.status(200).json({ success: true });
+});
+
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+app.get("*", (req, res) => {
+   res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"))
+})
 
 // error middleware
 app.use(errorMiddleware)

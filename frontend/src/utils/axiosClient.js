@@ -1,8 +1,10 @@
 import axios from "axios";
 import { ACCESS_TOKEN, USER_DATA, getLocalStorageItem, removeLocalStorageItem } from "./localStroageManager";
+import { BASE_API_URL } from "../constants";
 
 const axiosClient = axios.create({
-   baseURL: import.meta.env.VITE_APP_BASE_API_URL,
+   // baseURL: import.meta.env.VITE_APP_BASE_API_URL,
+   baseURL: BASE_API_URL,
    withCredentials: true,
 });
 

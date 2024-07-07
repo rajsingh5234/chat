@@ -1,4 +1,5 @@
 import { io } from 'socket.io-client';
+import { SOCKET_URL } from '../constants';
 
 export let socket;
 
@@ -12,5 +13,6 @@ export const connectSocket = async (token) => {
          token: token,
       },
    };
-   socket = io(import.meta.env.VITE_APP_SOCKET_URL, options);
+   // socket = io(import.meta.env.VITE_APP_SOCKET_URL, options);
+   socket = io(SOCKET_URL, options);
 };
